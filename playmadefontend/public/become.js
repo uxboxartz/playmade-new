@@ -23,7 +23,7 @@ document.querySelector("#partner-form").addEventListener("submit", async (event)
     console.log("Form data to send:", formData);
 
     try {
-        const response = await fetch("https://playmadebackend.vercel.app/become-partner", {
+        const response = await fetch("https://playmade-new-l4wj.vercel.app/become-partner", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
