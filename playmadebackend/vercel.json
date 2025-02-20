@@ -10,6 +10,10 @@
     {
       "src": "/send-email",
       "dest": "/sendEmail.js"
+    },
+    {
+      "src": "/become-partner",
+      "dest": "/sendEmail.js"
     }
   ]
 }
