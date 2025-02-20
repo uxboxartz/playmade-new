@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <link rel="icon" type="image/png" href="assests/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | PlayMade</title>
+    <link rel="stylesheet" href="contact.css" />
+    <!-- ✅ Preload Cabinet Grotesk in WOFF2 for better compatibility -->
+<link rel="preload" href="fonts/CabinetGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="fonts/CabinetGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="fonts/CabinetGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="fonts/CabinetGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="fonts/CabinetGrotesk-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <div class="logo reveal scale-in">
+        <a href="https://playmade.co.uk"> <!-- Root URL -->
+          <img src="assests/Logo.png" alt="PlayMade Logo" class="logo">
+        </a>
+        
+      </div>
+      
+      <!-- Add hamburger menu button -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+            <li><a href="become-partner.html">Become a Partner</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content reveal scale-in">
+        <h1>We’re Here to Help.</h1>
+        <p>
+            Reach out to us for inquiries, partnerships, or support.
+        </p>
+        <a href="#contact-us-section" class="download-button">Write a Quote</a>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <h1>Frequently Asked Questions.</h1>
+
+    <div class="faq-container reveal slide-left">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-title">Active and Healthy Communities UI</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>PlayPods helps foster a healthy, active lifestyle by making sports equipment accessible to everyone. We're dedicated to helping people stay active in their communities.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-title">How can I participate?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You can participate by signing up on our website, finding a PlayPod location near you, and borrowing equipment for free to enjoy an active lifestyle.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-title">Is PlayPods available in my city?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We are continuously expanding to new cities! Check our website for available locations, or reach out to request PlayPods in your area.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-title">How do I return the equipment?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Simply return the equipment to the designated PlayPod station where you borrowed it. Each station is equipped with clear instructions on how to return items.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-us-section" id="contact-us-section">
+  <div class="contact-container">
+      <!-- Form Section -->
+      <form id="contact-form" class="contact-form reveal scale-in">
+          <div class="input-group">
+              <div class="input-field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter Name Here" required />
+              </div>
+              <div class="input-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Enter Email Address" required />
+              </div>
+          </div>
+          <div class="input-field message-box">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Enter Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+      <!-- Image Section -->
+      <div class="contact-image reveal scale-in">
+          <img src="assests/ddddddd.png" alt="Support Image" />
+      </div>
+  </div>
+</section>
+  
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-logo reveal scale-in">
+        <img src="assests/Playmade Logo.png" alt="PlayMade Logo" />
+        <p>
+          Discover local recreation spaces, borrow equipment, and connect with
+          your community – all in one app.
+        </p>
+        <div class="store-buttons">
+          <img src="assests/Component 2.png" alt="Google Play" />
+          <img src="assests/Component 3.png" alt="App Store" />
+        </div>
+      </div>
+      <div class="footer-links reveal scale-in">
+        <div class="footer-column">
+          <h3>Accessibility</h3>
+          <ul>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="termsofuse.html">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Play Made</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">App</a></li>
+            <li><a href="#">Become A Partner</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Separate Copyright Section -->
+  <section class="copyright-section">
+    <p>Copyright © 2025 – present. Play Made. All rights reserved.</p>
+  </section>
+
+   <!-- Include your JS file -->
+   <script src="become-partner.js"></script>
+
+   <script src="contact.js"></script>
+
+  </body>
+</html>

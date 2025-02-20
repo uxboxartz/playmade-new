@@ -1,0 +1,2669 @@
+/* ✅ Define all Cabinet Grotesk font weights */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-Thin.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-ExtraLight.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-Light.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-Regular.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-Medium.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-SemiBold.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-Bold.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-ExtraBold.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("fonts/CabinetGrotesk-Black.woff2") format("woff2"),
+       url("fonts/CabinetGrotesk-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ✅ Apply Cabinet Grotesk globally */
+body {
+  font-family: "Cabinet Grotesk", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✅ Force font for all elements (fixes missing font on some iOS elements) */
+* {
+  font-family: "Cabinet Grotesk", sans-serif !important;
+}
+
+/* ✅ Fix for iOS Safari (prevents font fallback) */
+@supports (-webkit-touch-callout: none) {
+  body {
+    font-family: "Cabinet Grotesk", sans-serif !important;
+  }
+}
+
+/* ✅ Ensure correct font loads on mobile */
+@media (max-width: 768px) {
+  body, html, * {
+    font-family: "Cabinet Grotesk", sans-serif !important;
+  }
+}
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabinet Grotesk", sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-family: "Cabinet Grotesk", sans-serif !important;
+  }
+}
+
+
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fbf6f5; /* Keep the same as your design */
+  z-index: 1000; /* Ensures it stays above other elements */
+  padding: 20px 200px; /* Adjusted padding for proper alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 80px; /* Fixed height for consistency */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.018); /* Adds slight shadow for visibility */
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Navigation Menu */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Menu */
+nav ul li a {
+  text-decoration: none;
+  color: #380717;
+  font-family: "Cabinet Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  position: relative; /* Needed for the underline effect */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Underline Effect */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjusts the position of the underline */
+  width: 0%; /* Initially hidden */
+  height: 2px; /* Underline thickness */
+  background-color: #f45c0f; /* Underline color */
+  transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: #f45c0f; /* Changes text color */
+}
+
+/* Expand Underline on Hover */
+nav ul li a:hover::after {
+  width: 100%; /* Expands underline */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("assests/HeroImage.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+/* Add dark overlay to the background */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.377); /* Black with 40% opacity */
+  z-index: 1; /* Puts it above the background */
+}
+
+/* Ensure hero content is above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Higher than the background overlay */
+  max-width: 50%;
+  text-align: left;
+  color: white;
+}
+
+/* Ensure hero images are above the overlay */
+.hero-images {
+  position: relative;
+  z-index: 2; /* Same as hero content */
+}
+
+.hero-images img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 100px;
+}
+
+.hero-content {
+  max-width: 50%; /* Ensure the content doesn't span the full width */
+  text-align: left; /* Align text to the left */
+}
+
+.hero-content h1,
+.hero-content p {
+  margin: 0; /* Ensure no additional margin interferes */
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #f4511e; /* Button background color */
+  color: #fff; /* Text color */
+  padding: 0; /* Reset padding for exact dimensions */
+  width: 303px; /* Fixed width */
+  height: 85px; /* Fixed height */
+  text-align: center; /* Center text horizontally */
+  line-height: 85px; /* Center text vertically */
+  border-radius: 100px; /* Slight rounded corners */
+  font-family: "Cabinet Grotesk", sans-serif; /* Font family */
+  font-size: 32px; /* Font size */
+  font-weight: 900; /* Font weight */
+  text-decoration: none; /* Remove underline */
+  flex-shrink: 0; /* Prevent shrinking in flex containers */
+  transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+.download-button:hover {
+  background-color: #d63f1a; /* Slightly darker shade for hover */
+}
+
+/* Yellow Banner Section */
+.stats-banner-section {
+  background: #ffe31e;
+  padding: 40px 100px; /* Adjust padding for spacing */
+  height: 186px; /* Fixed height */
+  margin: 0 auto 0px auto; /* Add spacing below */
+  text-align: center;
+}
+
+.stats-banner {
+  display: flex;
+  justify-content: space-between; /* Space between the items */
+  align-items: center;
+  background: #ffe31e;
+  padding: 0px 100px; /* 100px padding on left and right */
+  box-sizing: border-box; /* Ensure padding doesn't add extra width */
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #380717;
+}
+
+.stat-value {
+  font-size: 60px;
+  font-weight: 900;
+  color: #380717;
+  margin: 5px 0;
+}
+
+/* Blue Introduction Section */
+.introduction-section {
+  background: #e8f1fc;
+  padding: 100px 100px; /* Adjust outer padding */
+  height: 913px; /* Allow height to adjust based on content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px; /* Increased max width for better spacing */
+  width: 100%; /* Stretch to full container width */
+  gap: 300px; /* Space between text and image */
+}
+
+.text-content {
+  max-width: 600px; /* Limit text width */
+  text-align: left;
+}
+
+.section-subtitle {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #380717;
+  letter-spacing: 0.3em;
+  margin-bottom: 0px;
+}
+
+.section-title {
+  font-size: 70px; /* Reduced font size for balance */
+  font-weight: 900;
+  color: #380717;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.section-title .highlight {
+  color: #f4511e;
+}
+
+.section-description {
+  font-size: 32px; /* Reduced font size */
+  font-weight: 400;
+  color: #380717;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #f4511e;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: #d63f1a;
+}
+
+.image-content img {
+  max-width: 700px; /* Adjusted image width */
+  height: auto;
+}
+
+/* Burgundy Discover Section */
+.discover-section {
+  background: #380717;
+  padding: 100px 100px; /* Adjust outer padding */
+  height: 1117px; /* Allow height to adjust based on content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.m-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px; /* Increased max width for better spacing */
+  width: 100%; /* Stretch to full container width */
+}
+
+.t-content {
+  max-width: 600px; /* Limit text width */
+  text-align: left;
+}
+
+.section2-subtitle {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffff;
+  letter-spacing: 0.3em;
+  margin-bottom: 0px;
+}
+
+.section2-title {
+  font-size: 70px; /* Reduced font size for balance */
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.section2-title .highlight {
+  color: #ffff;
+}
+
+.section2-description {
+  font-size: 32px; /* Reduced font size */
+  font-weight: 400;
+  color: #ffff;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #f4511e;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 24px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: #d63f1a;
+}
+
+.image2-content img {
+  max-width: 250px; /* Adjusted image width */
+  height: auto;
+}
+
+/* Play Section */
+.play-section {
+  background-color: #fef9f6; /* Light cream background */
+  padding: 200px 200px; /* 200px padding for left and right */
+}
+
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  height: 1117px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.play-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%; /* Ensure content stretches within the container */
+}
+
+.play-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Align the image to the left */
+}
+
+.play-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.play-text {
+  flex: 1;
+  max-width: 500px;
+  padding-left: 2rem; /* Additional spacing between text and image */
+}
+
+.play-title {
+  color: var(--Secondary, #380717);
+  font-family: "Cabinet Grotesk";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 12.48px;
+  text-transform: uppercase;
+}
+
+.play-heading {
+  color: #2c0204; /* Rich dark color */
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.play-description {
+  color: #5c1e08;
+  font-size: 32px;
+  margin-bottom: 2rem;
+}
+
+.play-button {
+  background: #f4511e;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 24px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #d63e18; /* Darker shade on hover */
+}
+
+/* Connect Section */
+.connect-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fbd3d7; /* Light pink background */
+  padding: 60px 5%;
+  height: 1117px; /* Fixed height */
+  box-sizing: border-box;
+}
+
+.connect-content {
+  max-width: 53%;
+}
+
+.connect-content h2 {
+  color: var(--Secondary, #380717);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 12.48px;
+  text-transform: uppercase;
+}
+
+.connect-content h1 {
+  font-size: 70px;
+  font-weight: 900;
+  color: #3d2129;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.connect-content p {
+  font-size: 32px;
+  color: #3d2129;
+  margin-bottom: 30px;
+}
+
+.connect-content button {
+  background: #f4511e;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 24px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.connect-content button:hover {
+  background-color: #e66a00;
+}
+
+.connect-image {
+  max-width: 40%;
+  text-align: right;
+}
+
+.connect-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+/* Partner Section */
+.partner-section {
+  position: relative;
+  background-color: #f9f4f2; /* Light cream background */
+  height: 1117px; /* Match height from the design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* Keep images masked within the container */
+}
+
+/* Content Styling */
+.partner-content {
+  z-index: 2;
+  max-width: 1000px;
+  max-height: 1117px;
+  padding: 20px;
+}
+
+.partner-content h1 {
+  font-size: 100px;
+  font-weight: 900;
+  color: #3d2129; /* Dark brown */
+  line-height: 1.3;
+  max-height: 1117px;
+  margin-bottom: 20px;
+}
+
+.partner-content h1 span {
+  color: #ff7a00; /* Orange for 'PlayMade' */
+}
+
+.partner-content p {
+  font-size: 40px;
+  color: #3d2129;
+  margin-bottom: 30px;
+}
+
+.partner-content button {
+  background: #f4511e;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 24px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.partner-content button:hover {
+  background-color: #e66a00;
+}
+
+/* Image Masks */
+.partner-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.partner-images .football-mask {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 350px;
+  transform: rotate(-15deg);
+}
+
+.partner-images .medicine-ball-mask {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 350px;
+  transform: rotate(-15deg);
+}
+
+@media screen and (max-width: 768px) {
+  .partner-images .football-mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    transform: rotate(360deg);
+  }
+
+  .partner-images .medicine-ball-mask {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100px;
+    transform: rotate(360deg);
+  }
+}
+
+/* Blog Section Styles */
+.blog-section {
+  background-color: #f0f4ff;
+  height: 1117px;
+  padding: 200px 200px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 900;
+}
+
+/* Blog Header */
+.blog-header h2 {
+  display: flex;
+  color: var(--Secondary, #380717);
+  font-family: "Cabinet Grotesk";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+/* Blog Cards */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 76px;
+  justify-content: left;
+  align-items: left;
+}
+
+/* Blog Navigation Arrows */
+.arrows {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 0;
+  right: 0; /* Aligns the arrows to the right */
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  background: #380717;
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.arrow i {
+  font-size: 24px;
+}
+
+.arrow:hover {
+  background: #d63f1a;
+}
+
+.arrow:disabled {
+  background: #380717;
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+/* Blog Carousel Styles */
+.blog-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 76px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-card {
+  flex: 0 0 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.blog-card img {
+  width: 420px;
+  height: 450px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 0px;
+  align-items: left;
+  text-align: left;
+}
+
+.blog-card h3 {
+  color: var(--Secondary, #380717);
+  font-family: "Cabinet Grotesk";
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.blog-card p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #380717;
+}
+
+.read-more-btn {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 32px;
+  color: #f4511e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.read-more-btn::after {
+  content: "";
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 32px;
+  color: #f4511e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.read-more-btn:hover {
+  color: #d63f1a;
+}
+
+/* Contact Us Section */
+.contact-us-section {
+  background: #fdf7f5;
+  height: 771px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px; /* Adjusted padding for alignment */
+  position: relative;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  align-items: flex-end; /* Aligns image at the bottom */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+}
+
+/* Contact Form */
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Labels (Headings for Inputs) */
+.input-field label {
+  font-size: 32px;
+  font-family: "Cabinet Grotesk";
+  font-weight: 900;
+  color: #380717;
+  margin-bottom: 24px;
+  display: block;
+}
+
+/* Input Group for Name & Email */
+.input-group {
+  display: flex;
+  gap: 24px;
+}
+
+/* Input Fields (Name & Email) */
+.input-field input {
+  /* width: 345px; */
+  font-family: "Cabinet Grotesk";
+  height: 30px;
+  background: rgba(244, 92, 15, 0.05);
+  border: none;
+  padding: 24px;
+  font-size: 24px;
+  border-radius: 12px;
+}
+
+/* Message Box */
+.message-box textarea {
+  font-family: "Cabinet Grotesk";
+  height: 100px;
+  background: rgba(244, 92, 15, 0.05);
+  border: none;
+  padding: 24px;
+  font-size: 24px;
+  border-radius: 12px;
+  min-width: -webkit-fill-available;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #f4511e;
+  color: #fff;
+  font-size: 18px;
+  width: 130px;
+  font-weight: 900;
+  padding: 24px 20px;
+  border: none;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #d63b13;
+}
+
+/* Contact Image */
+.contact-image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: auto;
+}
+
+/* Ensuring Image is Positioned at the Bottom */
+.contact-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+/* Responsive Styles */
+@media (min-width: 769px) {
+  .blog-card {
+    flex: 0 0 calc(33.333% - 20px);
+  }
+
+  .blog-cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-carousel {
+    overflow: hidden;
+  }
+
+  .blog-cards {
+    flex-wrap: nowrap;
+  }
+
+  .blog-card {
+    padding-top: 20px;
+    flex: 0 0 100%;
+    margin: 0;
+  }
+}
+
+/* Start Playing Section */
+.start-playing-section {
+  background: #ffe31e; /* Yellow background */
+  height: 500px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 100px; /* Adjusted left & right padding */
+  box-sizing: border-box;
+}
+
+/* Content Container */
+.start-playing-container {
+  max-width: 1520px; /* Restrict max width */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align text to the left */
+  margin-bottom: 50px;
+}
+
+/* Headline */
+.start-playing-text h1 {
+  font-size: 70px;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.start-playing-text p {
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Button Container */
+.start-playing-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Align buttons with text */
+
+  /* Download Button */
+  .download-btn {
+    background: #000;
+    max-width: 170px;
+    max-height: 50px;
+    color: #ffe31e;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Partner Button */
+  .partner-btn {
+    background: transparent;
+    max-width: 170px;
+    max-height: 50px;
+    color: #000;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 900;
+    border: 3px solid #000;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .download-btn:hover {
+    background: #f45c0f;
+    color: white;
+  }
+
+  .partner-btn:hover {
+    background: #000;
+    color: white;
+  }
+
+  /* Contact Us Section */
+  .contact-us-section {
+    background: #fdf7f5;
+    height: 771px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px; /* Adjusted padding for alignment */
+    position: relative;
+  }
+
+  /* Contact Container */
+  .contact-container {
+    display: flex;
+    align-items: flex-end; /* Aligns image at the bottom */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Labels (Headings for Inputs) */
+  .input-field label {
+    font-size: 32px;
+    font-family: "Cabinet Grotesk";
+    font-weight: 900;
+    color: #380717;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  /* Input Group for Name & Email */
+  .input-group {
+    display: flex;
+    gap: 24px;
+  }
+
+  /* Input Fields (Name & Email) */
+  .input-field input {
+    width: 100%;
+    font-family: "Cabinet Grotesk";
+    height: 60px;
+    background: rgba(244, 92, 15, 0.05);
+    border: none;
+    padding: 24px;
+    font-size: 24px;
+    border-radius: 12px;
+  }
+
+  /* Message Box */
+  .message-box textarea {
+    font-family: "Cabinet Grotesk";
+    max-height: 500px;
+    background: rgba(244, 92, 15, 0.05);
+    border: none;
+    padding: 24px;
+    font-size: 24px;
+    border-radius: 12px;
+  }
+
+  /* Submit Button */
+  .submit-btn {
+    background: #f4511e;
+    color: #fff;
+    font-size: 18px;
+    width: 300px;
+    font-weight: 900;
+    padding: 24px 50px;
+    border: none;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background: #d63b13;
+  }
+
+  /* Contact Image */
+  .contact-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: auto;
+  }
+
+  /* Ensuring Image is Positioned at the Bottom */
+  .contact-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+/* Footer Section */
+.footer-section {
+  background: #380717;
+  height: 457px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 200px; /* Adjusted left and right padding */
+  box-sizing: border-box;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px; /* Ensures content doesn't stretch too wide */
+  width: 100%;
+}
+
+/* Footer Logo and Description */
+.footer-logo {
+  width: 40%;
+  color: white;
+}
+
+.footer-logo img {
+  max-width: 180px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Store Buttons */
+.store-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.store-buttons img {
+  max-width: 150px;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 80px; /* Increased spacing between columns */
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 24px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Default Link Style */
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.footer-column ul li a:hover {
+  color: #f45c0f; /* Orange color on hover */
+}
+
+/* Separate Copyright Section */
+.copyright-section {
+  width: 100%;
+  height: 44px;
+  background: #f4511e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright-section p {
+  font-size: 12px;
+  color: white;
+  margin: 0;
+}
+
+/* Base Style for Animations */
+.reveal {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* Fade In Animation */
+.reveal.fade-in {
+  transform: translateY(30px);
+}
+
+.reveal.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scale In */
+.reveal.scale-in {
+  transform: scale(0.8);
+}
+
+.reveal.scale-in.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Global Media Query Variables */
+:root {
+  --mobile-padding: 20px;
+  --tablet-padding: 40px;
+  --desktop-padding: 100px;
+}
+
+/* Base Responsive Settings */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Header Responsive */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px var(--tablet-padding);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px var(--mobile-padding);
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Hero Section Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 var(--tablet-padding);
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content h1 {
+    font-size: 70px;
+  }
+
+  .hero-content p {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px var(--mobile-padding);
+    flex-direction: column;
+    text-align: left; /* Change from center to left */
+    align-items: flex-start; /* Ensures alignment to the left */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: left; /* Ensures text remains left-aligned */
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    font-size: 24px;
+  }
+
+  .download-button {
+    width: 100%;
+    max-width: 280px;
+    font-weight: 900;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+}
+
+/* Stats Banner Responsive */
+@media (max-width: 1024px) {
+  .stats-banner-section {
+    height: auto;
+    padding: 40px var(--tablet-padding);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-banner-section {
+    height: auto;
+    padding: 40px 20px;
+    background: #ffe31e;
+  }
+
+  .stats-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #380717;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+    font-weight: 900;
+    color: #380717;
+    margin: 0;
+  }
+}
+
+/* Sections Common Responsive */
+@media (max-width: 1024px) {
+  .introduction-section,
+  .discover-section,
+  .play-section,
+  .connect-section,
+  .partner-section,
+  .blog-section {
+    height: auto;
+    padding: 80px var(--tablet-padding);
+  }
+
+  .mission-content,
+  .m-content,
+  .play-content,
+  .connect-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .text-content,
+  .t-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .section-title,
+  .section2-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .introduction-section,
+  .discover-section,
+  .play-section,
+  .connect-section,
+  .partner-section,
+  .blog-section {
+    padding: 60px var(--mobile-padding);
+  }
+
+  .section-description,
+  .section2-description {
+    font-size: 24px;
+  }
+}
+
+/* Blog Cards Responsive */
+@media (max-width: 1024px) {
+  .blog-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Blog Header */
+  .blog-header h2 {
+    display: flex;
+    color: var(--Secondary, #380717);
+    font-family: "Cabinet Grotesk";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  /* Blog Cards */
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 76px;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .blog-header h2 {
+    font-size: 36px;
+    font-family: "Cabinet Grotesk";
+  }
+
+  .blog-card img {
+    width: 310px;
+    height: 310px;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+}
+
+/* Blog Navigation Arrows */
+@media (max-width: 1024px) {
+  .arrows {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 0;
+    right: 0; /* Aligns the arrows to the right */
+    top: 30%;
+    transform: translateY(-50%);
+  }
+
+  .arrow {
+    background: #380717;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+
+  .arrow i {
+    font-size: 24px;
+  }
+
+  .arrow:hover {
+    background: #d63f1a;
+  }
+
+  .arrow:disabled {
+    background: #380717;
+    cursor: not-allowed;
+    opacity: 50%;
+  }
+}
+
+/* Contact Form Responsive */
+@media (max-width: 1024px) {
+  .contact-us-section {
+    height: auto;
+    padding: 60px var(--tablet-padding);
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .input-field input,
+  .message-box textarea {
+    width: 100%;
+  }
+}
+
+/* Footer Responsive */
+@media (max-width: 1024px) {
+  .footer-section {
+    height: auto;
+    padding: 60px var(--tablet-padding);
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 100%;
+  }
+
+  .store-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+/* Image Responsiveness */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-content img,
+  .image2-content img,
+  .play-image img,
+  .connect-image img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Start Playing Section Responsive */
+@media (max-width: 768px) {
+  .start-playing-section {
+    height: auto;
+    padding: 32px var(--mobile-padding);
+  }
+
+  .start-playing-buttons {
+    flex-direction: column;
+    width: 170px;
+  }
+
+  .download-btn,
+  .partner-btn {
+    width: 170px;
+    text-align: left;
+  }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #380717;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:first-child {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:last-child {
+  top: 18px;
+}
+
+/* Hamburger Active State */
+.hamburger.active span:first-child {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:last-child {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+@media (max-width: 1024px) {
+  /* Fixed Header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fbf6f5; /* Keep the same as your design */
+    z-index: 1000; /* Ensures it stays above other elements */
+    padding: 20px 50px; /* Adjusted padding for proper alignment */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 80px; /* Fixed height for consistency */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.018); /* Adds slight shadow for visibility */
+  }
+  
+  /* Logo Styling */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  /* Navigation Menu */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Space between menu items */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation Menu */
+  nav ul li a {
+    text-decoration: none;
+    color: #380717;
+    font-family: "Cabinet Grotesk";
+    font-size: 18px;
+    font-weight: 500;
+    position: relative; /* Needed for the underline effect */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Underline Effect */
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjusts the position of the underline */
+    width: 0%; /* Initially hidden */
+    height: 2px; /* Underline thickness */
+    background-color: #f45c0f; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+  }
+  
+  /* Hover Effect */
+  nav ul li a:hover {
+    color: #f45c0f; /* Changes text color */
+  }
+  
+  /* Expand Underline on Hover */
+  nav ul li a:hover::after {
+    width: 100%; /* Expands underline */
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("assests/HeroImage.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+  }
+  
+  /* Add dark overlay to the background */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.377); /* Black with 40% opacity */
+    z-index: 1; /* Puts it above the background */
+  }
+  
+  /* Ensure hero content is above the overlay */
+  .hero-content {
+    position: relative;
+    z-index: 2; /* Higher than the background overlay */
+    max-width: 50%;
+    text-align: left;
+    color: white;
+  }
+  
+  /* Ensure hero images are above the overlay */
+  .hero-images {
+    position: relative;
+    z-index: 2; /* Same as hero content */
+  }
+  
+  .hero-images img {
+    max-width:110%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+  }
+  
+  .hero-content {
+    max-width: 50%; /* Ensure the content doesn't span the full width */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .hero-content h1,
+  .hero-content p {
+    margin: 0; /* Ensure no additional margin interferes */
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+  
+  .download-button {
+    display: inline-block;
+    background-color: #f4511e; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 0; /* Reset padding for exact dimensions */
+    width: 200px; /* Fixed width */
+    height: 65px; /* Fixed height */
+    text-align: center; /* Center text horizontally */
+    line-height: 65px; /* Center text vertically */
+    border-radius: 100px; /* Slight rounded corners */
+    font-family: "Cabinet Grotesk", sans-serif; /* Font family */
+    font-size: 24px; /* Font size */
+    font-weight: 900; /* Font weight */
+    text-decoration: none; /* Remove underline */
+    flex-shrink: 0; /* Prevent shrinking in flex containers */
+    transition: background-color 0.3s ease; /* Add hover transition */
+  }
+  
+  .download-button:hover {
+    background-color: #d63f1a; /* Slightly darker shade for hover */
+  }
+  }
+
+  @media (max-width: 1350px) {
+    /* Fixed Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fbf6f5; /* Keep the same as your design */
+      z-index: 1000; /* Ensures it stays above other elements */
+      padding: 20px 100px; /* Adjusted padding for proper alignment */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      height: 80px; /* Fixed height for consistency */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.018); /* Adds slight shadow for visibility */
+    }
+    
+    /* Logo Styling */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+    }
+    
+    /* Navigation Menu */
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px; /* Space between menu items */
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Navigation Menu */
+    nav ul li a {
+      text-decoration: none;
+      color: #380717;
+      font-family: "Cabinet Grotesk";
+      font-size: 18px;
+      font-weight: 500;
+      position: relative; /* Needed for the underline effect */
+      transition: color 0.3s ease-in-out;
+    }
+    
+    /* Underline Effect */
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px; /* Adjusts the position of the underline */
+      width: 0%; /* Initially hidden */
+      height: 2px; /* Underline thickness */
+      background-color: #f45c0f; /* Underline color */
+      transition: width 0.3s ease-in-out; /* Smooth animation */
+    }
+    
+    /* Hover Effect */
+    nav ul li a:hover {
+      color: #f45c0f; /* Changes text color */
+    }
+    
+    /* Expand Underline on Hover */
+    nav ul li a:hover::after {
+      width: 100%; /* Expands underline */
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("assests/HeroImage.png") center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 100px;
+      box-sizing: border-box;
+    }
+    
+    /* Add dark overlay to the background */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.377); /* Black with 40% opacity */
+      z-index: 1; /* Puts it above the background */
+    }
+    
+    /* Ensure hero content is above the overlay */
+    .hero-content {
+      position: relative;
+      z-index: 2; /* Higher than the background overlay */
+      max-width: 50%;
+      text-align: left;
+      color: white;
+    }
+    
+    /* Ensure hero images are above the overlay */
+    .hero-images {
+      position: relative;
+      z-index: 2; /* Same as hero content */
+    }
+    
+    .hero-images img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 100px;
+    }
+    
+    .hero-content {
+      max-width: 50%; /* Ensure the content doesn't span the full width */
+      text-align: left; /* Align text to the left */
+    }
+    
+    .hero-content h1,
+    .hero-content p {
+      margin: 0; /* Ensure no additional margin interferes */
+    }
+    
+    .hero-content h1 {
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+    
+    .download-button {
+      display: inline-block;
+      background-color: #f4511e; /* Button background color */
+      color: #fff; /* Text color */
+      padding: 0; /* Reset padding for exact dimensions */
+      width: 303px; /* Fixed width */
+      height: 85px; /* Fixed height */
+      text-align: center; /* Center text horizontally */
+      line-height: 85px; /* Center text vertically */
+      border-radius: 100px; /* Slight rounded corners */
+      font-family: "Cabinet Grotesk", sans-serif; /* Font family */
+      font-size: 32px; /* Font size */
+      font-weight: 900; /* Font weight */
+      text-decoration: none; /* Remove underline */
+      flex-shrink: 0; /* Prevent shrinking in flex containers */
+      transition: background-color 0.3s ease; /* Add hover transition */
+    }
+    
+    .download-button:hover {
+      background-color: #d63f1a; /* Slightly darker shade for hover */
+    }
+    }
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  /* Header & Navigation */
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 32px;
+    top: 25px;
+  }
+
+  header {
+    padding: 15px 20px;
+    position: fixed;
+    background: #fbf6f5;
+    z-index: 1000;
+  }
+
+  nav.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fbf6f5;
+    padding-top: 30px;
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+    justify-content: center;
+  }
+
+  nav.nav-menu.active {
+    right: 0;
+  }
+
+  nav.nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  nav.nav-menu ul li a {
+    font-size: 32px;
+    font-weight: 700;
+    color: #380717;
+  }
+
+  /* Hero Section */
+  @media (max-width: 768px) {
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Aligns content to the left */
+      justify-content: center;
+      padding: 32px 24px; /* Adjust padding */
+      text-align: left; /* Ensures text aligns left */
+    }
+  
+    .hero-content {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Aligns elements to the left */
+      justify-content: center;
+      margin-top: 100px;
+    }
+  
+    .hero-content h1 {
+      font-size: 42px; /* Adjust for better readability */
+      line-height: 1.2;
+      margin-bottom: 16px;
+      text-align: left; /* Force left alignment */
+    }
+  
+    .hero-content p {
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: left; /* Ensure paragraph is aligned left */
+    }
+  
+    .download-button {
+      display: inline-block;
+      background-color: #f4511e;
+      color: #fff;
+      width: 220px; /* Adjust button width */
+      height: 65px;
+      text-align: center;
+      line-height: 65px;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+  
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 80px;
+    }
+  
+    .hero-images img {
+      max-width: auto;  /* Ensures image doesn't exceed container */
+      height: auto;
+      display: block;
+      margin-top: 40px;  /* Remove or reduce the margin */
+      transform: none; /* Ensure no unintended scaling */
+    }
+    
+  }
+  
+  /* Stats Banner */
+  .stats-banner {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .stat-item {
+    width: 100%;
+  }
+
+  /* Discover Section */
+  .discover-section {
+    padding: 60px 20px;
+  }
+
+  .m-content {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .t-content {
+    text-align: center;
+  }
+
+  .section2-subtitle {
+    font-size: 24px;
+  }
+
+  .section2-title {
+    font-size: 36px;
+  }
+
+  .section2-description {
+    font-size: 18px;
+  }
+
+  /* Play Section */
+  .play-section {
+    padding: 60px 20px;
+  }
+
+  .play-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .play-image {
+    margin-bottom: 40px;
+  }
+
+  .play-text {
+    padding: 0;
+  }
+
+  /* Connect Section */
+  .connect-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .connect-content {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .connect-image {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .connect-image img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+  .connect-content button {
+    background: #f4511e;
+    color: #fff;
+    max-width: 200px;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 100px;
+  }
+
+  /* Partner Section */
+  .partner-section {
+    padding: 60px 20px;
+    align-content: center;
+  }
+
+  .partner-content h1 {
+    font-size: 48px;
+    margin-top: 100px;
+  }
+
+  .partner-content p {
+    font-size: 24px;
+  }
+
+  .partner-content button {
+    background: #f4511e;
+    color: #fff;
+    max-width: 240px;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 100px;
+  }
+
+  /* Blog Section */
+  .blog-section {
+    padding: 32px 32px;
+    max-height: 635px;
+    font-family: "Cabinet Grotesk";
+    font-weight: 900;
+  }
+  /* Blog Carousel Styles */
+  .blog-carousel {
+    width: 200%;
+    position: relative;
+    justify-content: center;
+    align-items: left;
+  }
+
+  .blog-cards {
+    gap: 0px;
+  }
+
+  .blog-card {
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: left;
+    text-align: left;
+  }
+
+  .blog-card img {
+    width: 330px;
+    height: 300px;
+    border-radius: 18px;
+  }
+
+  .blog-content {
+    padding: 0px;
+    align-items: left;
+    text-align: left;
+  }
+
+  .blog-card h3 {
+    color: var(--Secondary, #380717);
+    font-family: "Cabinet Grotesk";
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .blog-card p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #380717;
+  }
+
+  .read-more-btn {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 32px;
+    color: #f4511e;
+    font-weight: 00;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .read-more-btn::after {
+    content: "";
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 32px;
+    color: #f4511e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .read-more-btn:hover {
+    color: #d63f1a;
+  }
+  /* Blog Navigation Arrows */
+  .arrows {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    right: 0;
+    right: 0; /* Aligns the arrows to the right */
+    top: 10%;
+    transform: translateY(-50%);
+  }
+
+  .arrow {
+    background: #380717;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+
+  .arrow i {
+    font-size: 24px;
+  }
+
+  .arrow:hover {
+    background: #d63f1a;
+  }
+
+  .arrow:disabled {
+    background: #380717;
+    cursor: not-allowed;
+    opacity: 50%;
+  }
+
+  /* Start Playing Section */
+  .start-playing-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .start-playing-buttons {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .download-btn,
+  .partner-btn {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  /* Contact Section */
+  .contact-us-section {
+    padding: 60px 32px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-field input,
+  .message-box textarea {
+    width: -webkit-fill-available;
+  }
+
+  /* Footer */
+  .footer-section {
+    padding: 60px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .store-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Additional Tablet Breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+
+  .section-title,
+  .section2-title {
+    font-size: 48px;
+  }
+
+  .blog-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Text Responsive Styles */
+@media (max-width: 768px) {
+  /* Hero Section Text */
+  .hero-content h1 {
+    font-size: clamp(36px, 8vw, 48px);
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: clamp(18px, 4vw, 24px);
+    line-height: 1.4;
+  }
+
+  /* Stats Banner Text */
+  .stat-title {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+
+  .stat-value {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  /* Section Titles and Subtitles */
+  .section-subtitle,
+  .section2-subtitle,
+  .play-title {
+    font-size: clamp(20px, 4vw, 24px);
+    letter-spacing: 0.2em;
+  }
+
+  .section-title,
+  .section2-title,
+  .play-heading {
+    font-size: clamp(32px, 7vw, 42px);
+    line-height: 1.2;
+  }
+
+  .section-description,
+  .section2-description,
+  .play-description {
+    font-size: clamp(16px, 3.5vw, 20px);
+    line-height: 1.5;
+  }
+
+  /* Connect Section */
+  .connect-content h2 {
+    font-size: clamp(20px, 4vw, 24px);
+  }
+
+  .connect-content h1 {
+    font-size: clamp(32px, 7vw, 42px);
+  }
+
+  .connect-content p {
+    font-size: clamp(16px, 3.5vw, 20px);
+  }
+
+  /* Partner Section */
+  .partner-content h1 {
+    font-size: clamp(32px, 7vw, 42px);
+  }
+
+  .partner-content p {
+    font-size: clamp(16px, 3.5vw, 20px);
+  }
+
+  /* Blog Section */
+  .blog-header h2 {
+    font-size: clamp(32px, 7vw, 42px);
+    font-family: "Cabinet Grotesk";
+  }
+
+  .blog-card h3 {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+
+  .blog-card p {
+    font-size: clamp(16px, 3.5vw, 20px);
+  }
+
+  .read-more-btn {
+    font-size: clamp(18px, 100vw, 24px);
+  }
+
+  /* Start Playing Section */
+  .start-playing-text h1 {
+    font-size: clamp(32px, 7vw, 42px);
+    font-family: "Cabinet Grotesk";
+  }
+
+  .start-playing-text p {
+    font-size: clamp(16px, 3.5vw, 20px);
+    font-family: "Cabinet Grotesk";
+  }
+
+  .download-btn,
+  .partner-btn {
+    font-size: clamp(16px, 3.5vw, 20px);
+    font-family: "Cabinet Grotesk";
+    padding: 15px 25px;
+  }
+
+  /* Contact Form */
+  .input-field label {
+    font-size: clamp(20px, 8vw, 24px);
+    font-family: "Cabinet Grotesk";
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  .input-field input,
+  .message-box textarea {
+    font-size: clamp(16px, 3.5vw, 18px);
+    font-family: "Cabinet Grotesk";
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  /* Footer */
+  .footer-logo p {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+
+  .footer-column h3 {
+    font-size: clamp(18px, 4vw, 20px);
+  }
+
+  .footer-column ul li a {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+
+  /* Buttons */
+  .cta-button {
+    font-size: clamp(16px, 3.5vw, 20px);
+    font-weight: 900;
+    padding: 15px 30px;
+  }
+
+  /* Navigation Menu */
+  nav.nav-menu ul li a {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+}
+
+/* Blog Carousel Styles */
+@media (max-width: 768px) {
+  .blog-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .blog-cards {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* 100% for each card */
+  }
+
+  .blog-card {
+    width: 100%;
+    flex-shrink: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Add Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .contact-image {
+    justify-content: center; /* Center image on mobile */
+    margin-top: 40px; /* Add some space between form and image */
+  }
+
+  .contact-image img {
+    max-width: 100%; /* Allow image to be full width on mobile */
+    width: 300px; /* Set a reasonable width for mobile */
+  }
+}

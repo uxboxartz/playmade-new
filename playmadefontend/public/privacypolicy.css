@@ -1,0 +1,564 @@
+/* ✅ Define all Cabinet Grotesk font weights */
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-Thin.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-ExtraLight.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-Light.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-Regular.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-Medium.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-SemiBold.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-Bold.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-ExtraBold.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("fonts/CabinetGrotesk-Black.woff2") format("woff2"),
+      url("fonts/CabinetGrotesk-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* ✅ Apply Cabinet Grotesk globally */
+  body {
+    font-family: "Cabinet Grotesk", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* ✅ Force font for all elements (fixes missing font on some iOS elements) */
+  * {
+    font-family: "Cabinet Grotesk", sans-serif !important;
+  }
+  
+  /* ✅ Fix for iOS Safari (prevents font fallback) */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      font-family: "Cabinet Grotesk", sans-serif !important;
+    }
+  }
+  
+  /* ✅ Ensure correct font loads on mobile */
+  @media (max-width: 768px) {
+  
+    body,
+    html,
+    * {
+      font-family: "Cabinet Grotesk", sans-serif !important;
+    }
+  }
+  
+  
+  /* Global Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabinet Grotesk", sans-serif !important;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-family: "Cabinet Grotesk", sans-serif !important;
+    }
+  }
+  
+  /* ✅ Fixed Header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fbf6f5;
+    z-index: 1000;
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 80px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.018);
+}
+
+/* ✅ Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* ✅ Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    color: #380717;
+    font-family: "Cabinet Grotesk";
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Underline Effect */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #f45c0f;
+    transition: width 0.3s ease-in-out;
+}
+
+/* ✅ Hover & Active State */
+nav ul li a:hover {
+    color: #f45c0f;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    color: #f45c0f;
+    font-weight: 700;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* ✅ Hamburger Menu (Hidden by Default) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #380717;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:first-child {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.hamburger span:last-child {
+    top: 18px;
+}
+
+/* ✅ Mobile Responsive Header */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    /* ✅ Hamburger Menu */
+    .hamburger {
+        display: block;
+        position: fixed;
+        right: 32px;
+        top: 25px;
+    }
+
+    /* ✅ Mobile Navigation */
+    nav.nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #fbf6f5;
+        padding-top: 30px;
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+        justify-content: center;
+    }
+
+    nav.nav-menu.active {
+        right: 0;
+    }
+
+    nav.nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    nav.nav-menu ul li a {
+        font-size: 32px;
+        font-weight: 700;
+        color: #380717;
+    }
+}
+
+/* ✅ Mobile Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Hero Section */
+.privacy-hero {
+    background: url('assests/TermsBanner.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.privacy-hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    align-items: center;
+    margin-top: 130px;
+}
+
+/* Content Section */
+.privacy-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 200px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.privacy-content h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+.privacy-content ul {
+    padding-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .privacy-content {
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .privacy-hero h1 {
+        font-size: 40px;
+    }
+    
+    .privacy-content {
+        padding: 50px 20px;
+    }
+
+    .privacy-content h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* Footer Section */
+.footer-section {
+    background: #380717;
+    height: 457px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px 200px; /* Adjusted left and right padding */
+    box-sizing: border-box;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px; /* Ensures content doesn't stretch too wide */
+    width: 100%;
+  }
+  
+  /* Footer Logo and Description */
+  .footer-logo {
+    width: 40%;
+    color: white;
+  }
+  
+  .footer-logo img {
+    max-width: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Store Buttons */
+  .store-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .store-buttons img {
+    max-width: 150px;
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    display: flex;
+    gap: 80px; /* Increased spacing between columns */
+  }
+  
+  .footer-column h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 24px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 24px;
+  }
+  
+  .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Default Link Style */
+  .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .footer-column ul li a:hover {
+    color: #f45c0f; /* Orange color on hover */
+  }
+  
+  /* Separate Copyright Section */
+  .copyright-section {
+    width: 100%;
+    height: 44px;
+    background: #f4511e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .copyright-section p {
+    font-size: 12px;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Footer Responsive */
+  @media (max-width: 1024px) {
+    .footer-section {
+      height: auto;
+      padding: 60px var(--tablet-padding);
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      width: 100%;
+    }
+  
+    .store-buttons {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+  }
+  /* Base Style for Animations */
+  .reveal {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+  }
+  
+  /* Fade In Animation */
+  .reveal.fade-in {
+    transform: translateY(30px);
+  }
+  
+  .reveal.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Scale In */
+  .reveal.scale-in {
+    transform: scale(0.8);
+  }
+  
+  .reveal.scale-in.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Slide Left Animation */
+  .reveal.slide-left {
+    opacity: 0;
+    transform: translateX(-50px); /* Start off-screen */
+    transition: all 0.8s ease-out;
+  }
+  
+  .reveal.slide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+
+  /* Text Responsive Styles */
+@media (max-width: 768px) {
+  .footer-logo p {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+
+  .footer-column h3 {
+    font-size: clamp(18px, 4vw, 20px);
+  }
+
+  .footer-column ul li a {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+}
+
+/* Global Media Query Variables */
+:root {
+    --mobile-padding: 32px;
+    --tablet-padding: 40px;
+    --desktop-padding: 100px;
+  }
+  
+  /* Base Responsive Settings */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
