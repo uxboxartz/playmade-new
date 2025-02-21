@@ -4,7 +4,8 @@ function showNotification(title, message, isSuccess) {
         title: title,
         text: message,
         icon: isSuccess ? "success" : "error",
-        confirmButtonText: "OK",
+        confirmButtonText: "Done",
+        confirmButtonColor: "#F45C0F", // PlayMade Orange
     });
 }
 
