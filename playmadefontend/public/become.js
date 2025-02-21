@@ -1,3 +1,13 @@
+// Include SweetAlert2 for toast notifications
+function showNotification(title, message, isSuccess) {
+    Swal.fire({
+        title: title,
+        text: message,
+        icon: isSuccess ? "success" : "error",
+        confirmButtonText: "OK",
+    });
+}
+
 document.querySelector("#partner-form").addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -15,7 +25,7 @@ document.querySelector("#partner-form").addEventListener("submit", async (event)
     // Check for missing fields
     for (const key in formData) {
         if (!formData[key]) {
-            alert(`Please fill in the ${key.replace(/_/g, ' ').toLowerCase()}.`);
+            showNotification("Missing Field", `Please fill in the ${key.replace(/_/g, ' ').toLowerCase()}.`, false);
             return; // Stop form submission if any required field is missing
         }
     }
@@ -36,13 +46,13 @@ document.querySelector("#partner-form").addEventListener("submit", async (event)
         console.log("Response data:", responseData);
 
         if (!response.ok) {
-            alert(`Error: ${responseData.message || "Failed to send request"}`);
+            showNotification("Error", responseData.message || "Failed to send request", false);
         } else {
-            alert("Message sent successfully!");
+            showNotification("Success!", "Your partnership request has been sent successfully.", true);
             event.target.reset();  // <-- Reset form fields after successful submission
         }
     } catch (error) {
         console.error("Error occurred while sending the request:", error);
-        alert("An error occurred while sending the email.");
+        showNotification("Error", "An unexpected error occurred. Please try again later.", false);
     }
 });
