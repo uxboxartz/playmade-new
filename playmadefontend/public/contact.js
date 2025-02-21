@@ -21,6 +21,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
             alert(`Error: ${errorData.message || "Failed to send email"}`);
         } else {
             alert("Message sent successfully!");
+            this.reset();  // <-- Reset form fields after successful submission
         }
     } catch (error) {
         console.error("Error:", error);

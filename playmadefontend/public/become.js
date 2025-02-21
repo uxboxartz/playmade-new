@@ -39,6 +39,7 @@ document.querySelector("#partner-form").addEventListener("submit", async (event)
             alert(`Error: ${responseData.message || "Failed to send request"}`);
         } else {
             alert("Message sent successfully!");
+            event.target.reset();  // <-- Reset form fields after successful submission
         }
     } catch (error) {
         console.error("Error occurred while sending the request:", error);
