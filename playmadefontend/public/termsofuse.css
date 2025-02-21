@@ -239,6 +239,17 @@ nav ul li a.active::after {
 .hamburger span:last-child {
     top: 18px;
 }
+/* Style mailto links */
+a[href^="mailto:"] {
+  color: #F45C0F;  /* Blue color */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+}
+
+a[href^="mailto:"]:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
 
 /* ✅ Mobile Responsive Header */
 @media (max-width: 1024px) {
