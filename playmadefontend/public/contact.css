@@ -288,7 +288,7 @@ nav ul li a:hover::after {
   background-color: #f4511e; /* Button background color */
   color: #fff; /* Text color */
   padding: 0; /* Reset padding for exact dimensions */
-  width: 300px; /* Fixed width */
+  width: 240px; /* Fixed width */
   height: 85px; /* Fixed height */
   text-align: center; /* Center text horizontally */
   line-height: 85px; /* Center text vertically */
