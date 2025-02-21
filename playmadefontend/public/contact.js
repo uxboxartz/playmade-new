@@ -1,3 +1,13 @@
+// Function to show a SweetAlert2 notification
+function showNotification(title, message, isSuccess) {
+    Swal.fire({
+        title: title,
+        text: message,
+        icon: isSuccess ? "success" : "error",
+        confirmButtonText: "OK",
+    });
+}
+
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -16,15 +26,16 @@ document.getElementById("contact-form").addEventListener("submit", async functio
             body: JSON.stringify(formData),
         });
 
+        const result = await response.json();
+
         if (!response.ok) {
-            const errorData = await response.json();
-            alert(`Error: ${errorData.message || "Failed to send email"}`);
+            showNotification("Error", result.message || "Failed to send email", false);
         } else {
-            alert("Message sent successfully!");
+            showNotification("Success!", "Your message has been sent successfully.", true);
             this.reset();  // <-- Reset form fields after successful submission
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("An error occurred while sending the email.");
+        showNotification("Error", "An unexpected error occurred. Please try again later.", false);
     }
 });
